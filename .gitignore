@@ -1,0 +1,9 @@
+/.bundle/
+/config/*.yml
+/config/environments/*-local.rb
+/db/schema.rb
+/log/
+/tmp/
+/public/
+
+sftp-config.json
