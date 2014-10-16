@@ -19,8 +19,6 @@ body {
   z-index: 10;
 }
 
-
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -28,11 +26,11 @@ body {
 .carousel {
 	margin: 100px auto;
   margin-bottom: 60px;
+  width: 1000px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-	    margin-bottom: 100px;
-
+  margin-bottom: 100px;
   z-index: 1;
 }
 
@@ -46,8 +44,6 @@ body {
   top: 0;
   left: 0;
 }
-
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
