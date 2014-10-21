@@ -23,10 +23,15 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
-.carousel {
+.welcome-container {
 	margin: 100px auto;
   margin-bottom: 60px;
   width: 1000px;
+}
+
+.social_media a {
+  margin-left: 5px;
+  color: #555;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {

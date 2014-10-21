@@ -3,7 +3,7 @@
 /config/environments/*-local.rb
 /db/schema.rb
 /log/
-/tmp/
+tmp/
 /public/
 
 sftp-config.json
