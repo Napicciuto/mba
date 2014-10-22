@@ -38,3 +38,4 @@ gem 'formtastic',       github: 'justinfrench/formtastic'           # Require fo
 gem 'devise'
 gem 'google-analytics-rails'
 gem 'mysql2'
+gem 'thin'

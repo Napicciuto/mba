@@ -46,8 +46,9 @@ body {
 }
 .carousel img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 15px;
+  left: 40px;
+  width:300px;
 }
 
 /* MARKETING CONTENT
