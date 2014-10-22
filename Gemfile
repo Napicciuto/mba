@@ -37,3 +37,4 @@ gem 'ransack',          github: 'activerecord-hackery/ransack'      # Require fo
 gem 'formtastic',       github: 'justinfrench/formtastic'           # Require for ActiveAdmin to work with Rails 4.1
 gem 'devise'
 gem 'google-analytics-rails'
+gem 'mysql2'
