@@ -108,6 +108,8 @@ GEM
     eventmachine (1.0.3)
     execjs (2.2.1)
     google-analytics-rails (0.0.6)
+    haml (4.0.5)
+      tilt
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -221,6 +223,7 @@ DEPENDENCIES
   devise
   formtastic!
   google-analytics-rails
+  haml
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
