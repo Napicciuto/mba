@@ -1,31 +1,85 @@
 .hero {
- 	background-image: url(asset-path('home_hero.png'));
- 	background-repeat: no-repeat;
- 	background-position: center;
- 	height: 560px;
- }
+  background-image: url(asset-path('home_hero.png'));
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 560px;
+  position: relative;
 
- .how_it_works {
- 	background-image: url(asset-path('home_how_it_works.png'));
- 	background-repeat: no-repeat;
- 	background-position: center;
- 	height: 560px;
- }
- .connect_me {
- 	background: #E9E9E9;
- 	height: 330px;
- }
+  .hero_middle_box {
+    padding: 30px 50px;
+    margin-left:-403px;
+    height: 272px;
+    width: 804px;
+    position: absolute;
+    left:50%;
+    top: 100px;
+    text-align: center;
+    h1 {
+      color: #19335C;
+    }
 
- .hire_me {
- 	background: #19335C;
- 	height: 375px;
- }
+    p {
+      font-size: 20px;
+      padding: 5px 50px;
+    }
 
- .lastest_news {
- 	height: 500px;
- }
+    button {
+      height:55px;
+      width:230px;
+      margin-right: 45px;
+      margin-left: 30px;
+      border: none;
+      &.btn_find_my_mba {
+        background-image: url(asset-path('btn_find_my_mba.png'));
+      }
+      &.btn_list_your_business {
+        background-image: url(asset-path('btn_list_your_business.png'));
+      }
+    }
+  }
+}
+.how_it_works {
+  background-image: url(asset-path('home_how_it_works.png'));
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 560px;
+  .left_checklist {
+    height: 420px;
+    width: 400px;
+    position: absolute;
+    margin-left: -500px;
+    margin-top: 60px;
+    left: 50%;
+    font-size: 16px;
 
- .footer {
- 	background: #19335C;
- 	height: 200px;
- }
+    ul {
+      list-style-image: url(asset-path('green_checkmark.png'));
+    }
+
+    button {
+      height:55px;
+      width:230px;
+      border: none;
+      &.btn_learn_more_now {
+        background-image: url(asset-path('btn_learn_more_now.png'));
+      }
+    }
+
+  }
+
+}
+.connect_me {
+  background: #E9E9E9;
+  height: 330px;
+}
+.hire_me {
+  background: #19335C;
+  height: 375px;
+}
+.lastest_news {
+  height: 500px;
+}
+.footer {
+  background: #19335C;
+  height: 200px;
+}
