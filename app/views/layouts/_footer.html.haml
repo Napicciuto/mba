@@ -1,2 +1,43 @@
-%div.footer
-  this is the footer
+%footer.footer-outer
+  .wrapper
+    .container
+      .row
+        .col-sm-12
+          .footer-inner
+            %a{:href => "#"}
+              = image_tag 'footer-logo.png', alt: 'logo'
+            %a.regi{:href => "#"} Login
+            %a.regi{:href => "#"} Register
+          .footer-inner
+            %h5 Quick Links
+            %ul
+              %li
+                = link_to 'How it Works', how_it_works_path
+              %li
+                = link_to 'About BeMyMBA', about_us_path
+              %li
+                = link_to 'News', news_path
+              %li
+                = link_to 'Contact', contact_path
+          .footer-inner
+            %h5 Contact Us
+            %ul
+              %li
+                %a{:href => "#"} 555-555-5555
+              %li
+                %a{:href => "#"} Address, City, State
+          .footer-inner.social-icons
+            %h5 Stay Connected
+            %ul
+              %li.fb
+                %a{:href => "https://www.facebook.com/bemymba"} Like us on Facebook
+              %li.tweet
+                %a{:href => "https://twitter.com/BeMyMBA"} Follow us on Twitter
+              %li.info
+                %a{:href => "https://www.linkedin.com/company/be-my-mba"} LinkedIn
+          .footer-inner
+            %h5 Terms of Us
+            %ul
+              %li
+                %a{:href => "#"} Privacy Policy
+  .slider-test

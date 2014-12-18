@@ -1,30 +1,183 @@
-.hero
-  .hero_middle_box
-    %h1
-      FIND YOUR BUSINESS PROFESSIONAL
-    %p
-      Lorem ipsum dolor sit amet, consectuter a dip iscing elitt, sed do eiusmod tempor incididunt ut labore et aliqua.
-    %button.btn_find_my_mba
-    %button.btn_list_your_business
-.how_it_works
-  .left_checklist
-    %h2
-      How BeMyMBA Works
-    %p
-      Lorem ipsum dolo sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co asd ashaf mmod consequat.
-    %ul
-      %li
-        Lorem ipsum dolor
-      %li
-        Lorem ipsum dolor consetetur adig
-      %li
-        Lorem ipsum dolor adip
-    %p
-      Lorem ipsum dolo sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    %button.btn_learn_more_now
-.connect_me
-  test2.5d
-.hire_me
-  test3  
-.lastest_news
-  test4
+%section.banner-container
+  / banner starts here
+  = image_tag('banner-image2.png', alt:'banner-image2')
+  .wrapper
+    .banner-overlay-outer
+      .banner-overlay
+        .overlay-inner
+          %h2 Find Your Business Professional
+          %p Lorem ipsum dolor sit amet, consectetur adip iscing elitt, sed do eiusmod tempor incididunt ut labore et aliqua.
+          .button-area
+            %a.green_btn{:href => "#"} Find MyMBA
+            %a.green_btn{:href => "#"} List Your Business
+%section.work-outer
+  / how mba works starts here
+  .wrapper
+    .container
+      .row
+        .col-sm-5.pull-right
+          .work-right
+            %a{:href => "#"}
+              = image_tag('computer.png', alt:'copmputer-image')
+        .col-sm-7
+          .work-left
+            %h3 How BeMyMBA Works
+            %p Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co asd ashaf mmodo consequat.
+            %ul
+              %li Lorem ipsum dolor
+              %li Lorem ipsum dolor consectetur adip
+              %li Lorem ipsum dolor adip
+            %p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
+            %a.green_btn{:href => "#"} Learn More Now
+%section.connect-with-customers
+  / connect with customers starts here
+  .wrapper
+    .container
+      .row
+        .col-sm-12
+          .section-top
+            .section-left
+              %h3 Connect with New Customers
+              %p Are you a business professional? Find out how BeMyMBA can help your business.
+            .section-right
+              %a.green_btn{:href => "#"} Sign up Today
+          .slider-block
+            %ul.bxslider
+              %li
+                = image_tag('slider-img4.png', alt:'image')
+              %li
+                = image_tag('slider-img3.png', alt:'image')
+              %li
+                = image_tag('slider-img2.png', alt:'image')
+              %li
+                = image_tag('slider-img1.png', alt:'image')
+              %li
+                = image_tag('slider-img4.png', alt:'image')
+              %li
+                = image_tag('slider-img3.png', alt:'image')
+              %li
+                = image_tag('slider-img2.png', alt:'image')
+              %li
+                = image_tag('slider-img1.png', alt:'image')
+%section.hire-confidence
+  / hire with confidence starts here
+  .wrapper
+    .container
+      .row
+        .col-sm-6
+          .content-section
+            %h3 Hire With Confidence
+            %p
+              Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co asd ashaf mmodo consequat.
+            %blockquote
+              %p
+                %strong Review by Ethan Cross, Findlay, Ohio
+              %p
+                %strong Project:
+                Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod sed do eiusm.
+            .rating-star
+              %a{:href => "#"}
+                = image_tag('green-star.png', alt:'image')
+
+              %span Nov. 8, 2014
+        .col-sm-6
+          .image-block
+            %ul
+              %li
+                = image_tag('list-img1.png', alt:'image')
+              %li
+                = image_tag('tick-mark1.png', alt:'image')
+              %li
+                = image_tag('list-img2.png', alt:'image')
+              %li
+                = image_tag('list-img3.png', alt:'image')
+
+%section.news-outer
+  / news and blog starts here
+  .wrapper
+    .container
+      .row
+        .col-sm-12
+          .block-container
+            .each-block-outer.blog
+              .each-block
+                %h4 Buzzworthy Blog
+                .block-content-outer
+                  %ul
+                    %li
+                      .block-image
+                        .block-img-inner
+                          = image_tag('blog-photo1.jpg', alt:'photo')                           
+                      .block-inner-content
+                        %h6 Hire a Professional
+                        %span September 15, 2014
+                    %li
+                      .block-image
+                        .block-img-inner
+                          = image_tag('blog-photo2.jpg', alt:'photo')                                                   
+                      .block-inner-content
+                        %h6 Story Title
+                        %span September 15, 2014
+                    %li
+                      .block-image
+                        .block-img-inner
+                          = image_tag('blog-photo3.jpg', alt:'photo')
+                      .block-inner-content
+                        %h6 Story Title
+                        %span September 15, 2014
+            .each-block-outer.News
+              .each-block
+                %h4 Latest News
+                .block-content-outer
+                  %ul
+                    %li
+                      .block-image
+                        .block-img-inner.date-details
+                          Oct
+                          %span 23
+                      .block-inner-content
+                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit, sed do eiusmod tempor incididunt ut dogy labore et dolore magna aliqua.
+                        %a{:href => "#"} Read More >
+                    %li
+                      .block-image
+                        .block-img-inner.date-details
+                          Oct
+                          %span 23
+                      .block-inner-content
+                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
+                        %a{:href => "#"} Learn More >
+                    %li
+                      .block-image
+                        .block-img-inner.date-details
+                          Oct
+                          %span 23
+                      .block-inner-content
+                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
+                        %a{:href => "#"} See All >
+            .each-block-outer.informations
+              .each-block
+                %h4 Additional Information
+                .block-content-outer
+                  %ul
+                    %li
+                      .block-image
+                        .block-img-inner
+                          = image_tag('info-tick-mark.png', alt:'photo')                          
+                      .block-inner-content
+                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit, sed do eiusmod tempor incididunt ut dogy labore et dolore magna aliqua.
+                        %a{:href => "#"} Read More >
+                    %li
+                      .block-image
+                        .block-img-inner
+                          = image_tag('info-tick-mark.png', alt:'photo')
+                      .block-inner-content
+                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
+                        %a{:href => "#"} Learn More >
+                    %li
+                      .block-image
+                        .block-img-inner
+                          = image_tag('info-tick-mark.png', alt:'photo')                          
+                      .block-inner-content
+                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
+                        %a{:href => "#"} See All >

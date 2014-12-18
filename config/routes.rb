@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	
+  devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
@@ -9,6 +10,11 @@ Rails.application.routes.draw do
   #root 'welcome#index'
 
   root 'pages#home'
+
+  match 'how_it_works', to: 'pages#how_it_works', via: [:get], as: :how_it_works
+  match 'about_us', to: 'pages#about_us', via: [:get], as: :about_us
+  match 'contact', to: 'pages#contact', via: [:get], as: :contact
+  match 'news', to: 'pages#news', via: [:get], as: :news
 
   resources :newsletters, only: [:new, :create]
   

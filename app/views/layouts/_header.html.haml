@@ -1,25 +1,33 @@
-.top_line
-.header
-  #header_left.header_box.left
-    = image_tag 'logo_two.png'
-  #header_right.header_box.left
-    #login_help.right
-      .right
-        = link_to 'Log In'
-        | 
-        = link_to 'Register'
-      .clear
-      .right 
-        Have questions? 555-555-5555 or email 
-        = link_to 'info@bemymba.com'
-    %br    
-    %br    
-    %br    
-    #main_nav.right
-      = link_to 'How it Works', '#' 
-      |
-      = link_to 'About', '#' 
-      |
-      = link_to 'News', '#' 
-      |
-      = link_to 'Contact', '#'
+%header#header{:role => "banner"}
+  .header-outer
+    .wrapper
+      .container
+        .row
+          .col-sm-12
+            .header-inner
+              .header-logo
+                %a{:href => "/"}
+                  = image_tag('header-logo.png', alt: 'logo')
+              .header-right
+                .right-top
+                  .log-in
+                    %ul
+                      %li
+                        = link_to 'Log In', user_session_path
+                      %li
+                        = link_to 'Register', new_user_registration_path
+                  %p
+                    Have questions?
+                    %a{:href => "tell:555-555-5555"}
+                      555-555-5555</a href="#"> or email
+                      %a{:href => "mailto:info@bemymba.com"} info@bemymba.com</a href="#">
+                .right-bottom
+                  %ul
+                    %li
+                      = link_to 'How it Works', how_it_works_path
+                    %li
+                      = link_to 'About', about_us_path
+                    %li
+                      = link_to 'News', news_path
+                    %li
+                      = link_to 'Contact', contact_path
