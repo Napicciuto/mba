@@ -26,3 +26,5 @@ gem 'thin'
 gem 'turbolinks'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'uglifier', '>= 1.3.0'
+gem 'unicorn'
+
