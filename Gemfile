@@ -8,7 +8,7 @@ gem 'mysql2'
 gem 'activeadmin',      github: 'gregbell/active_admin'             # ActiveAdmin backend framework for Rails administration interface
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
-gem 'formtastic',       github: 'justinfrench/formtastic'           # Require for ActiveAdmin to work with Rails 4.1
+gem 'formtastic'
 gem 'google-analytics-rails'
 gem 'haml'
 gem 'jbuilder', '~> 2.0'
