@@ -1,5 +1,4 @@
 /.bundle/
-/config/secrets.yml
 /config/environments/*-local.rb
 /db/schema.rb
 /log/
