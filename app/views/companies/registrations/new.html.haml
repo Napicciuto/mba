@@ -1,0 +1,103 @@
+%section#interior-section{:role => "main"}
+  .wrapper
+    .container
+      .row
+        .col-sm-12
+          .content-outer
+            .content-left
+              %h3 Company Sign Up
+              %p Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co asd ashaf mmodo consequat.
+              %p
+                = form_for(resource, as: resource_name, url: worker_registration_path(resource_name), html: { method: :put }) do |f| 
+                  = devise_error_messages!
+                  .field
+                    = f.label :name
+                    = f.text_field :name, autofocus: true
+                  .field
+                    = f.label :phone
+                    = f.text_field :phone              
+                  .field
+                    = f.label :address
+                    = f.text_field :address                 
+                  .field
+                    = f.label :city
+                    = f.text_field :city                
+                  .field
+                    = f.label :state
+                    = f.text_field :state               
+                  .field
+                    = f.label :zip
+                    = f.text_field :zip                
+                  .field
+                    = f.label :title
+                    = f.text_field :title                 
+                  .field
+                    = f.label :company_name
+                    = f.text_field :company_name                 
+                  .field
+                    = f.label :company_industry
+                    = f.text_field :company_industry 
+                  .field
+                    = f.label :years_in_business
+                    = f.text_field :years_in_business 
+                  .field
+                    = f.label :email
+                    = f.email_field :email
+                  - if devise_mapping.confirmable? && resource.pending_reconfirmation? 
+                    %div
+                      Currently waiting confirmation for: 
+                      = resource.unconfirmed_email
+                  .field
+                    = f.label :password
+                    = f.password_field :password, autocomplete: "off"
+                  .field
+                    = f.label :password_confirmation
+                    = f.password_field :password_confirmation, autocomplete: "off"
+                  .actions
+                    = f.submit "Update" 
+
+                  = link_to "Back", :back 
+              %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asper natur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, co nsectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil mo le stiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+             
+            .content-right
+              .gain
+                %a.green_btn{:href => "#"} Gain New Customers
+              .find
+                %a.green_btn{:href => "#"} Find an MyMBA
+              %h4 Buzzworthy Blog
+              .block-content-outer
+                %ul
+                  %li
+                    .block-image
+                      .block-img-inner
+                        = image_tag('interior-professional.jpg', alt: 'photo')                      
+                    .block-inner-content
+                      %h6 Hire a Professional
+                      %span September 15, 2014
+                  %li
+                    .block-image
+                      .block-img-inner
+                        = image_tag('interior-story.jpg', alt: 'photo')                                               
+                    .block-inner-content
+                      %h6 Story Title
+                      %span September 15, 2014
+              %h4 Latest News
+              .block-content-outer.News
+                %ul
+                  %li
+                    .block-image
+                      .block-img-inner.date-details
+                        Oct
+                        %span 23
+                    .block-inner-content
+                      %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit, sed do eiusmod tempor incididu.
+                      %a{:href => "#"} Read More >
+                  %li
+                    .block-image
+                      .block-img-inner.date-details
+                        Oct
+                        %span 23
+                    .block-inner-content
+                      %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
+                      %a{:href => "#"} Learn More >
+

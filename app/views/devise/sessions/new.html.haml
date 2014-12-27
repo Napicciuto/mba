@@ -1,0 +1,67 @@
+%section#interior-section{:role => "main"}
+  .wrapper
+    .container
+      .row
+        .col-sm-12
+          .content-outer
+            .content-left
+              %h2 Log in
+              %p
+                = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
+                  = devise_error_messages!
+                  .field
+                    = f.label :email
+                    = f.text_field :email, autofocus: true
+                  .field
+                    = f.label :password
+                    = f.password_field :password              
+                  .actions
+                    = f.submit "Log in" 
+
+                  - if devise_mapping.rememberable?
+                    = f.check_box :remember_me
+                    = f.label :remember_me
+
+              %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asper natur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, co nsectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil mo le stiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+             
+            .content-right
+              .gain
+                %a.green_btn{:href => "#"} Gain New Customers
+              .find
+                %a.green_btn{:href => "#"} Find an MyMBA
+              %h4 Buzzworthy Blog
+              .block-content-outer
+                %ul
+                  %li
+                    .block-image
+                      .block-img-inner
+                        = image_tag('interior-professional.jpg', alt: 'photo')                      
+                    .block-inner-content
+                      %h6 Hire a Professional
+                      %span September 15, 2014
+                  %li
+                    .block-image
+                      .block-img-inner
+                        = image_tag('interior-story.jpg', alt: 'photo')                                               
+                    .block-inner-content
+                      %h6 Story Title
+                      %span September 15, 2014
+              %h4 Latest News
+              .block-content-outer.News
+                %ul
+                  %li
+                    .block-image
+                      .block-img-inner.date-details
+                        Oct
+                        %span 23
+                    .block-inner-content
+                      %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit, sed do eiusmod tempor incididu.
+                      %a{:href => "#"} Read More >
+                  %li
+                    .block-image
+                      .block-img-inner.date-details
+                        Oct
+                        %span 23
+                    .block-inner-content
+                      %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
+                      %a{:href => "#"} Learn More >
