@@ -8,7 +8,7 @@
               %h3 MBA Sign Up
               %p Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co asd ashaf mmodo consequat.
               %p
-                = form_for(resource, as: resource_name, url: worker_registration_path(resource_name), html: { method: :put }) do |f| 
+                = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
                   = devise_error_messages!
                   .field
                     = f.label :name

@@ -13,7 +13,10 @@
                   .log-in
                     %ul
                       %li
-                        = link_to 'Log In', new_worker_session_path
+                        - if worker_signed_in?
+                          = link_to 'Log Out', destroy_worker_session_path
+                        - else
+                          = link_to 'Log In', new_worker_session_path
                       %li
                         = link_to 'Register', new_worker_registration_path
                   %p
