@@ -1,13 +1,12 @@
 ActiveAdmin.register Worker do
-  # permit_params :email, :password, :password_confirmation
+  permit_params :email, :password, :password_confirmation, :name, :phone, :address, :city, :state, :zip, :school, :degree, :major, :industry, :experience, :experience_year, :skills
 
   filter :name
+  filter :email
   filter :school
   filter :degree
   filter :major
-  filter :experience
-  filter :experience_year
-  filter :email
+  filter :industry
   filter :current_sign_in_at
   filter :sign_in_count
   filter :created_at
@@ -17,16 +16,14 @@ ActiveAdmin.register Worker do
     id_column
     column :name
     column :email
-    column :phone
     column :school
     column :degree
     column :major
     column :industry
-    column :experience
-    column :experience_year
     column :current_sign_in_at
     column :sign_in_count
     column :created_at
+    column :updated_at
     actions
   end
 
@@ -46,8 +43,10 @@ ActiveAdmin.register Worker do
       f.input :experience_year
       f.input :skills
       f.input :email
-      f.input :password
-      f.input :password_confirmation
+      if f.object.nil?
+        f.input :password
+        f.input :password_confirmation
+      end
     end
     f.actions
   end

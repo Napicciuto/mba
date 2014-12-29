@@ -1,5 +1,6 @@
 ActiveAdmin.register Company do
-  # permit_params :email, :password, :password_confirmation
+  permit_params :email, :password, :password_confirmation, :name, :title, :phone, :address, :city, :state, :zip, :company_name, :company_industry, :company_description, :years_in_business
+
   filter :name
   filter :company_name
   filter :company_industry
@@ -28,6 +29,7 @@ ActiveAdmin.register Company do
   form do |f|
     f.inputs "MBA Details" do
       f.input :name
+      f.input :title
       f.input :phone
       f.input :address
       f.input :city
@@ -38,8 +40,10 @@ ActiveAdmin.register Company do
       f.input :company_description
       f.input :years_in_business
       f.input :email
-      f.input :password
-      f.input :password_confirmation
+      if f.object.nil?
+        f.input :password
+        f.input :password_confirmation
+      end
     end
     f.actions
   end
