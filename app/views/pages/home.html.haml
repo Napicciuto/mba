@@ -104,56 +104,34 @@
                 %h4 Buzzworthy Blog
                 .block-content-outer
                   %ul
-                    %li
-                      .block-image
-                        .block-img-inner
-                          = image_tag('blog-photo1.jpg', alt:'photo')                           
-                      .block-inner-content
-                        %h6 Hire a Professional
-                        %span September 15, 2014
-                    %li
-                      .block-image
-                        .block-img-inner
-                          = image_tag('blog-photo2.jpg', alt:'photo')                                                   
-                      .block-inner-content
-                        %h6 Story Title
-                        %span September 15, 2014
-                    %li
-                      .block-image
-                        .block-img-inner
-                          = image_tag('blog-photo3.jpg', alt:'photo')
-                      .block-inner-content
-                        %h6 Story Title
-                        %span September 15, 2014
+                    - @blog[0,3].each do |post|
+                      %li
+                        .block-image
+                          .block-img-inner
+                            = image_tag('blog-photo1.jpg', alt:'photo')
+                        .block-inner-content
+                          %h6
+                            = post.title
+                          %span
+                            = post.created_at.strftime('%Y-%m-%d %H:%M')
+                          %a{:href => "#"} Read More >
             .each-block-outer.News
               .each-block
                 %h4 Latest News
                 .block-content-outer
                   %ul
-                    %li
-                      .block-image
-                        .block-img-inner.date-details
-                          Oct
-                          %span 23
-                      .block-inner-content
-                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit, sed do eiusmod tempor incididunt ut dogy labore et dolore magna aliqua.
-                        %a{:href => "#"} Read More >
-                    %li
-                      .block-image
-                        .block-img-inner.date-details
-                          Oct
-                          %span 23
-                      .block-inner-content
-                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
-                        %a{:href => "#"} Learn More >
-                    %li
-                      .block-image
-                        .block-img-inner.date-details
-                          Oct
-                          %span 23
-                      .block-inner-content
-                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
-                        %a{:href => "#"} See All >
+                    - @twitter[0,3].each do |tweet|
+                      - time = tweet.created_at
+                      %li
+                        .block-image
+                          .block-img-inner.date-details
+                            = time.strftime('%b')
+                            %span
+                              = time.strftime('%d')
+                        .block-inner-content
+                          %p
+                            = tweet.text
+                          %a{:href => "#"} Read More >
             .each-block-outer.informations
               .each-block
                 %h4 Additional Information

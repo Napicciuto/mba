@@ -23,6 +23,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'therubyracer'
 gem 'thin'
+gem 'twitter'
 gem 'turbolinks'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'uglifier', '>= 1.3.0'

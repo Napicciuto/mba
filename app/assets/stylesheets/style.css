@@ -259,6 +259,7 @@ img {
 .each-block-outer.blog {
 	padding: 0;
 }
+.each-block-outer.blog a { color: white; font-size: 12px;}
 .each-block {
 	float: left;
 	max-width: 275px;
