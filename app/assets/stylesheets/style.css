@@ -309,7 +309,6 @@ img {
 	float: left;
 	width: 100%;
 	list-style: none;
-	padding-top: 50px;
 }
 .block-content-outer ul li:first-child, .News .block-content-outer ul li:first-child, .informations .block-content-outer ul li:first-child {
 	padding: 0;
@@ -326,11 +325,7 @@ img {
 .block-inner-content h6 {
 	float: left;
 	color: #fff;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
 	font-size: 14px;
-	line-height: 15px;
-	border-bottom: 1px solid #fff;
 	width: 100%;
 }
 .block-inner-content span {
@@ -380,14 +375,14 @@ img {
 .News .block-inner-content {
 	width: 88%;
 }
-.News .block-inner-content p, .informations .block-inner-content p {
+.blog .block-inner-content p, .News .block-inner-content p, .informations .block-inner-content p {
 	font-size: 14px;
 	line-height: 16px;
 	color: #fff;
 	float: left;
 	margin-bottom: 8px;
 }
-.News .block-inner-content a, .informations .block-inner-content a {
+.blog .block-inner-content a, .News .block-inner-content a, .informations .block-inner-content a {
 	float: left;
 	width: 100%;
 	color: #fff;

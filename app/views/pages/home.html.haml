@@ -109,12 +109,15 @@
                         .block-image
                           .block-img-inner
                             = image_tag('blog-photo1.jpg', alt:'photo')
+                            %a{:href => "#"} Read More >
                         .block-inner-content
                           %h6
                             = post.title
+                          %p
+                            = truncate(post.body, length: 110)
                           %span
-                            = post.created_at.strftime('%Y-%m-%d %H:%M')
-                          %a{:href => "#"} Read More >
+                            =# post.created_at.strftime('%Y-%m-%d %H:%M')
+                          
             .each-block-outer.News
               .each-block
                 %h4 Latest News
