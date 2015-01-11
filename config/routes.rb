@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   #root 'welcome#index'
 
   root 'pages#home'
-  match 'how_it_works', to: 'pages#how_it_works', via: [:get], as: :how_it_works
-  match 'about_us', to: 'pages#about_us', via: [:get], as: :about_us
-  match 'contact', to: 'pages#contact', via: [:get], as: :contact
-  match 'news', to: 'pages#news', via: [:get], as: :news  
+  get 'how_it_works', to: 'pages#how_it_works', as: :how_it_works
+  get 'about_us', to: 'pages#about_us', as: :about_us
+  get 'contact', to: 'pages#contact', as: :contact
+  get 'news', to: 'pages#news', as: :news 
+  get 'terms', to: 'pages#terms', as: :terms 
 end

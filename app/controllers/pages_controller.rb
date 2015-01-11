@@ -5,6 +5,9 @@ class PagesController < ApplicationController
     @twitter = twitter_client.home_timeline
   end
 
+  def terms
+  end
+
   private
 
   def twitter_client
