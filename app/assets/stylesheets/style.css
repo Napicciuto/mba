@@ -527,7 +527,7 @@ img {
 	width: 100%;
 }
 .overlay-inner p {
-	float: left;
+	float: center;
 	color: #212323;
 	font-size: 24px;
 	line-height: 28px;

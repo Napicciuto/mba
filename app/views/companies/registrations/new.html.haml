@@ -6,6 +6,8 @@
           .content-outer
             .content-left
               %h3 Company Sign Up
+              %p
+                = link_to "MBA Sign Up", new_worker_registration_path 
               %p Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co asd ashaf mmodo consequat.
               %p
                 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
@@ -68,8 +70,6 @@
                   %br/
                   .actions
                     = f.submit "Update", class: "btn btn-default"
-
-              %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asper natur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, co nsectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil mo le stiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
              
             .content-right
               .gain
