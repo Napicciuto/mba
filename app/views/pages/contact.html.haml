@@ -1,1 +1,46 @@
-Coming Soon
+.container
+  .row
+    .col-lg-8
+      %br/
+      .alert.alert-success
+        %strong
+          %span.glyphicon.glyphicon-send
+          Success! Message sent. (If form ok!)
+      .alert.alert-danger
+        %span.glyphicon.glyphicon-alert
+        %strong Error! Please check the inputs. (If form error!)
+    %form{:action => "", :method => "post", :role => "form"}
+      .col-lg-8
+        .well.well-sm
+          %strong
+            %i.glyphicon.glyphicon-ok.form-control-feedback
+            Required Field
+        .form-group
+          %label{:for => "contact_name"} Your Name
+          .input-group
+            %input#InputName.form-control{:name => "contact_name", :placeholder => "Enter Name", :required => "", :type => "text"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-ok.form-control-feedback
+        .form-group
+          %label{:for => "contact_email"} Your Email
+          .input-group
+            %input#InputEmail.form-control{:name => "contact_email", :placeholder => "Enter Email", :required => "", :type => "email"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-ok.form-control-feedback
+        .form-group
+          %label{:for => "contect_message"} Message
+          .input-group
+            %textarea#InputMessage.form-control{:name => "contect_message", :required => "", :rows => "5"}
+            %span.input-group-addon
+              %i.glyphicon.glyphicon-ok.form-control-feedback
+        .form-group
+          %label{:for => "honey"} What is 4+3?
+          .input-group
+            %input#InputReal.form-control{:name => "honey", :required => "", :type => "text"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-ok.form-control-feedback
+        %input#submit.btn.btn-info.pull-right{:name => "submit", :type => "submit", :value => "Submit"}
+    %hr.featurette-divider.hidden-lg
+  %br/
+  %br/
+ 
