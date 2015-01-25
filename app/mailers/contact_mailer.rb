@@ -3,7 +3,6 @@ class ContactMailer < ActionMailer::Base
 
   def contact_us(info)
   	@info = info
-  	binding.pry
   	mail(to: 'info@bemymba.com', subject: 'Contact Us')
   end
 
