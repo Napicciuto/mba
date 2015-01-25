@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'how_it_works', to: 'pages#how_it_works', as: :how_it_works
   get 'about_us', to: 'pages#about_us', as: :about_us
-  get 'contact', to: 'pages#contact', as: :contact
   get 'news', to: 'pages#news', as: :news 
   get 'terms', to: 'pages#terms', as: :terms 
+
+  resources :contacts, only: [:index, :create]
 end

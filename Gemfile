@@ -15,6 +15,7 @@ gem 'haml'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'less-rails'
+gem 'mandrill-rails'
 gem 'polyamorous',      github: 'activerecord-hackery/polyamorous'  # Require for ActiveAdmin to work with Rails 4.1
 gem 'pry', :group => :development
 gem 'ransack',          github: 'activerecord-hackery/ransack'      # Require for ActiveAdmin to work with Rails 4.1

@@ -147,6 +147,8 @@ GEM
     libv8 (3.16.14.7)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
+    mandrill-rails (1.0.2)
+      activesupport (>= 3.0.3)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
@@ -258,6 +260,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
+  mandrill-rails
   mysql2
   polyamorous!
   pry

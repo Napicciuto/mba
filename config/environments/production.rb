@@ -77,4 +77,15 @@ Rails.application.configure do
 
   GA.tracker = "UA-55948660-1"
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.mandrillapp.com',
+    port:                 587,
+    domain:               'bemymba.com',
+    user_name:            'nick@bemymba.com',
+    password:             'xttU2q1JJI05Hf16trRgWw',
+    authentication:       'plain',
+    enable_starttls_auto: true  
+  }
+
 end
