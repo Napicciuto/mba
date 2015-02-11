@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
   def home
     @blog = Blog.all.reverse
-    @twitter = [] #twitter_client.user_timeline
+    @twitter = twitter_client.user_timeline
   end
 
   def terms
