@@ -4,10 +4,10 @@
       .row
         .col-sm-12
           .footer-inner
-            %a{:href => "#"}
+            %a{:href => "/"}
               = image_tag 'footer-logo.png', alt: 'logo'
-            %a.regi{:href => "#"} Login
-            %a.regi{:href => "#"} Register
+            = link_to 'Log In', new_worker_session_path
+            = link_to 'Register', new_worker_registration_path
           .footer-inner
             %h5 Quick Links
             %ul
@@ -39,13 +39,11 @@
             %h5 Terms of Us
             %ul
               %li
-                %a{:href => "#{terms_path}"} Privacy Policy
+                %a{:href => "#{policy_privacy_path}"} Privacy Policy
               %li
-                %a{:href => "#{terms_path}"} Fee Policy
+                %a{:href => "#{policy_fee_path}"} Fee Policy
               %li
-                %a{:href => "#{terms_path}"} Privacy Policy
+                %a{:href => "#{policy_service_path}"} Service Contract Policy
               %li
-                %a{:href => "#{terms_path}"} Service Contract Policy
-              %li
-                %a{:href => "#{terms_path}"} Terms of Service
+                %a{:href => "#{policy_terms_path}"} Terms of Service
   .slider-test
