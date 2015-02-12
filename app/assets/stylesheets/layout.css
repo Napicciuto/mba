@@ -22,7 +22,7 @@
 	.each-block h4 {padding: 0 5px 8px 20px;line-height: 19px;  font-size: 16px;}
 	.block-content-outer {padding: 0 10px;}
 	.overlay-inner h2 {font-size: 31px;line-height: 33px;}
-	.overlay-inner p { font-size: 22px;line-height: 25px; margin-bottom: 19px;}
+	.overlay-inner p { font-size: 22px;line-height: 25px; margin-bottom: 19px; margin-left: 65px;}
 	.overlay-inner { min-height: 240px; max-width: 666px;}
 	.button-area .green_btn { margin-left: 55px;padding: 15px 54px 15px 31px;}
 	.banner-overlay-outer { top: 100px;}
@@ -95,7 +95,7 @@
 	.each-block-outer{height: auto;}
 	.overlay-inner { padding: 17px 48px; max-width:550px;min-height: 200px;}
 	.overlay-inner h2 {font-size: 20px; line-height: 22px;}
-	.overlay-inner p {font-size: 17px;line-height: 17px; margin-bottom: 0;}
+	.overlay-inner p {font-size: 17px;line-height: 17px; margin-bottom: 0; margin-left: 65px;}
 	.button-area .green_btn{margin-left:0px;display:inline-block;font-size:17px;padding:11px 52px 11px 21px;background: url("white-arrow.png") no-repeat  right 35px top 19px #8dc641;margin-bottom:15px;}
 	.overlay-inner .button-area { margin-top: 25px;}
 	.banner-container img{ height:380px;}
