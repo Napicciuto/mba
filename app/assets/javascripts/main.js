@@ -13,19 +13,17 @@ jQuery(".footer-inner h5").click(function () {
 //bxslider	
 	if (jQuery.fn.bxSlider) {
 		jQuery('.bxslider').bxSlider({
+			mode: 'horizontal',
 			minSlides: 2,
 			maxSlides: 4,
 			slideWidth: 121,
 			slideMargin: 50,
-			speed : 600,
+			speed : 1500,
 			controls : true,
 			adaptiveHeight:true,
 			moveSlides: 1
 		});
 	}
-
-	
-	
 	
 	
 });
