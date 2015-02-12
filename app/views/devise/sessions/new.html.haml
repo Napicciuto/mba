@@ -6,6 +6,7 @@
           .content-outer
             .content-left
               %h2 Log in
+              %h4 Sign in with Email and Password
               %p
                 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
                   = devise_error_messages!
