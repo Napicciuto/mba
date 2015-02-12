@@ -39,11 +39,12 @@
             %h5 Terms of Us
             %ul
               %li
-                %a{:href => "#{policy_privacy_path}"} Privacy Policy
+                %a{:href => "#{policy_path('policy_privacy')}"} Privacy Policy
               %li
-                %a{:href => "#{policy_fee_path}"} Fee Policy
+                %a{:href => "#{policy_path('policy_fee')}"} Fee Policy
               %li
-                %a{:href => "#{policy_service_path}"} Service Contract Policy
+                %a{:href => "#{policy_path('policy_service')}"} Service Contract Policy
               %li
-                %a{:href => "#{policy_terms_path}"} Terms of Service
+                %a{:href => "#{policy_path('policy_terms')}"} Terms of Service
+
   .slider-test

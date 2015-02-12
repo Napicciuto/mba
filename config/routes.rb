@@ -15,10 +15,7 @@ Rails.application.routes.draw do
   get 'how_it_works', to: 'pages#how_it_works', as: :how_it_works
   get 'about_us', to: 'pages#about_us', as: :about_us
   get 'news', to: 'pages#news', as: :news 
-  get 'policy_fee', to: 'pages#policy_fee', as: :policy_fee 
-  get 'policy_privacy', to: 'pages#policy_privacy', as: :policy_privacy 
-  get 'policy_service', to: 'pages#policy_service', as: :policy_service 
-  get 'policy_terms', to: 'pages#policy_terms', as: :policy_terms 
+  get 'policy/:policy_type', to: 'pages#policy', as: :policy
 
   resources :contacts, only: [:index, :create]
 end
