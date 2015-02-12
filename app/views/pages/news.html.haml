@@ -6,5 +6,21 @@
           .content-outer
             .content-left
               %h3 BeMyMBA News
-             
+              %ul.timeline
+                - @twitter.each do |tweet|
+                  - screen_name = tweet.in_reply_to_screen_name
+                  %li
+                    .timeline-panel
+                      .timeline-heading
+                        %h4.timeline-title
+                          = screen_name.nil? ? 'BeMyMBA' : screen_name
+                        %p
+                          %small.text-muted
+                            %i.glyphicon.glyphicon-time
+                            = time_ago_in_words(tweet.created_at)
+                            via Twitter
+                      .timeline-body
+                        %p
+                          = tweet.full_text
+
             = render partial: 'shared/outer_side_bar'

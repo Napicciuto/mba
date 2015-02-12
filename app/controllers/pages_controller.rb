@@ -1,11 +1,15 @@
 class PagesController < ApplicationController
+  before_filter :collect_tweets, only: [:home, :news]
 
   def home
     @blog = Blog.all.reverse
-    @twitter = twitter_client.user_timeline
   end
 
   private
+
+  def collect_tweets
+    @twitter = twitter_client.user_timeline
+  end
 
   def twitter_client
     Twitter::REST::Client.new do |config|
