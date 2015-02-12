@@ -1,29 +1,24 @@
-jQuery(function() {
-	
+$(document).ready(function(){
 
-//toggle
-jQuery(".footer-inner h5").click(function () {
-		if ( jQuery(".slider-test").is(":visible") ) {
-		  jQuery(this).parent().children(".footer-inner ul").slideToggle("slow");
-		}
+  //toggle
+  $(".footer-inner h5").click(function () {
+    if ( $(".slider-test").is(":visible") ) {
+      $(this).parent().children(".footer-inner ul").slideToggle("slow");
+    }
+   });
+
+  //bxslider
+  if ($.fn.bxSlider) {
+    $('.bxslider').bxSlider({
+      mode: 'horizontal',
+      minSlides: 2,
+      maxSlides: 4,
+      slideWidth: 121,
+      slideMargin: 50,
+      speed : 1500,
+      controls : true,
+      adaptiveHeight:true,
+      moveSlides: 1
     });
-    
-    
-   
-//bxslider	
-	if (jQuery.fn.bxSlider) {
-		jQuery('.bxslider').bxSlider({
-			mode: 'horizontal',
-			minSlides: 2,
-			maxSlides: 4,
-			slideWidth: 121,
-			slideMargin: 50,
-			speed : 1500,
-			controls : true,
-			adaptiveHeight:true,
-			moveSlides: 1
-		});
-	}
-	
-	
+  }
 });
