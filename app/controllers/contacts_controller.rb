@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
 
   def create
   	@errors = true
-  	if params[:honey] == "7"
+  	if honey_pot?
   	  @contact = Contact.new(contacts)
   	  @errors = false if @contact.save
       email_people
@@ -15,6 +15,10 @@ class ContactsController < ApplicationController
   end
 
   private
+
+  def honey_pot?
+    params[:honey] == "7"
+  end
 
   def email_people
     ContactMailer.contact_us(@contact).deliver
