@@ -12,23 +12,59 @@
             %strong
               %span.glyphicon.glyphicon-send
               Success! Message sent.
-                  
-    = form_tag contacts_path, method: 'post' do 
+                
+    = form_tag contacts_path, method: 'post' do
+      .col-lg-8
+        %p Need some help on a project? Want to earn some extra cash helping with a project? Curious as to what this is all about? Send us a note and we'll get back to you soon.   
       .col-lg-8
         .well.well-sm
           %strong
             %i.glyphicon.glyphicon-ok.form-control-feedback
             Required Field
         .form-group
-          %label{:for => "contact_name"} Your Name
+          %label{:for => "contact_name"} Name
           .input-group
             %input#InputName.form-control{:name => "contacts[name]", :placeholder => "Enter Name", :required => "", :type => "text"}
               %span.input-group-addon
                 %i.glyphicon.glyphicon-ok.form-control-feedback
         .form-group
-          %label{:for => "contact_email"} Your Email
+          %label{:for => "contact_email"} Email
           .input-group
             %input#InputEmail.form-control{:name => "contacts[email]", :placeholder => "Enter Email", :required => "", :type => "email"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-ok.form-control-feedback
+        .form-group
+          %label{:for => "contact_email"} Phone
+          .input-group
+            %input#InputPhone.form-control{:name => "contacts[phone]", :placeholder => "Enter Phone", :required => "", :type => "phone"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-ok.form-control-feedback
+        .form-group
+          %label{:for => "contact_email"} City
+          .input-group
+            %input#InputCity.form-control{:name => "contacts[city]", :placeholder => "Enter City", :required => "", :type => "text"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-ok.form-control-feedback
+        .form-group
+          %label{:for => "contact_email"} State
+          .input-group
+            %input#InputState.form-control{:name => "contacts[state]", :placeholder => "Enter State", :required => "", :type => "text"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-ok.form-control-feedback
+        .form-group
+          %label{:for => "contact_email"} Zip
+          .input-group
+            %input#InputZip.form-control{:name => "contacts[zip]", :placeholder => "Enter Zip", :required => "", :type => "zip"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-ok.form-control-feedback
+        .form-group
+          %label{:for => "contact_email"} Subject
+          .input-group
+            %select#InputEmail.form-control{:name => "contacts[subject]"}
+              %option Post a Project
+              %option Technical Support
+              %option MBA Applicant
+              %option General Inquiry
               %span.input-group-addon
                 %i.glyphicon.glyphicon-ok.form-control-feedback
         .form-group
