@@ -27,11 +27,12 @@
                     %br/
                     .field
                       = f.label :degree
-                      = f.text_field :degree, placeholder: 'Enter Degree', class: 'form-control'
+                      = f.collection_select :degree, Degree.active, :id, :degree
                     %br/
-                    .field
-                      = f.label :industry
-                      = f.text_field :industry, placeholder: 'Enter Industry', class: 'form-control'                  
+                    .field.select_industries
+                      = f.label :industries
+                      %br/
+                      = f.collection_select :industry_ids, Industry.active, :id, :industry, {}, {:multiple => true}
                     %br/
                     .field
                       = f.label :email

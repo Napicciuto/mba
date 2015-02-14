@@ -3,4 +3,7 @@ class Worker < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  belongs_to :degree
+  has_and_belongs_to_many :industries
 end
