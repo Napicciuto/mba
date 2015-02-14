@@ -1,13 +1,6 @@
 ActiveAdmin.register Contact do
   permit_params :name, :email, :phone, :city, :state, :zip, :subject, :body
 
-  # filter :degree
-  # filter :active
-  # filter :created_at
-  # filter :update_at
-
-
-
   index do
     selectable_column
     id_column
