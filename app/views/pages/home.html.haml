@@ -8,8 +8,8 @@
           %h2 The Next Evolution in Consulting
           %p Linking Companies in Need With MBAs at a Reasonable Rate.
           .button-area
-            %a.green_btn{:href => "#"} Find a Project
-            %a.green_btn{:href => "#"} Post a Project
+            = link_to 'Find a Project', project_link_path('worker'), class: :green_btn
+            = link_to 'Post a Project', project_link_path('company'), class: :green_btn
 %section.work-outer
   / how mba works starts here
   .wrapper
@@ -23,12 +23,19 @@
           .work-left
             %h3 How BeMyMBA Works
             %p With the cost of hiring top talent continuing to rise, we offer an equitable solution on a consulting or project basis. At BeMyMBA, we connect companies in need with MBAs at a reasonable rate. From start-ups with a dream to Fortune 500’s with complex challenges, BeMyMBA has a solution. Companies simply post projects, MBAs bid on them and companies select the best candidate. All funds are securely held until the project is complete. 
+            %h3 How it Works
             %ul
-              %li High Output
-              %li Low Cost
-              %li Simple Secure Process
-            %p Sign up today and let us show you how we are the next evolution of consulting.
-            %a.green_btn{:href => "#"} Learn More Now
+              %li Companies post detailed projects with an opening bid
+              %li MBAs bid on projects that match their strengths
+              %li Companies select the winner based on an evaluation of skills, experience, BeMyMBA Grade and price
+              %li Work is completed via BeMyMBA platforms and payment is transferred to the MBA
+
+        .col-sm-12
+          %p 
+            %strong It’s that simple! 
+            All of the MBAs’ credentials are thoroughly vetted and confirmed prior to becoming authorized to use the site. Similarly, all project payments are deposited prior to any work being performed. This way you can trust that you’re getting exactly what you expect.
+
+          %p Additionally, all companies and MBAs are reviewed at the completion of a project. This translates into our proprietary BeMyMBA Grade – this way you can confidently make decisions on whom to work with. As we grow, we will be incorporating many more features to make the MBA and Business interaction easier and faster. BeMyMBA is the next evolution of consulting – join us as we take business into the future and change the world.
 %section.hire-confidence
   / hire with confidence starts here
   .wrapper
@@ -68,66 +75,18 @@
     .container
       .row
         .col-sm-12
-          .block-container
-            .each-block-outer.blog
-              .each-block
-                %h4 Buzzworthy Blog
-                .block-content-outer
-                  %ul
-                    - @blog[0,3].each do |post|
-                      %li
-                        .block-image
-                          .block-img-inner
-                            = image_tag(blog_img(post.file_url), alt:'photo')
-                            %a{:href => "#"} Read More
-                        .block-inner-content
-                          %h6
-                            = post.title
-                          %p
-                            = truncate(post.body, length: 110)
-                          %span
-                            =# post.created_at.strftime('%Y-%m-%d %H:%M')
-                          
-            .each-block-outer.News
-              .each-block
-                %h4 Latest News
-                .block-content-outer
-                  %ul
-                    - @twitter[0,3].each do |tweet|
-                      - time = tweet.created_at
-                      %li
-                        .block-image
-                          .block-img-inner.date-details
-                            = time.strftime('%b')
-                            %span
-                              = time.strftime('%d')
-                        .block-inner-content
-                          %p
-                            = tweet.text
-                          %a{:href => "#"} Read More >
-            .each-block-outer.informations
-              .each-block
-                %h4 Additional Information
-                .block-content-outer
-                  %ul
-                    %li
-                      .block-image
-                        .block-img-inner
-                          = image_tag('info-tick-mark.png', alt:'photo')                          
-                      .block-inner-content
-                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit, sed do eiusmod tempor incididunt ut dogy labore et dolore magna aliqua.
-                        %a{:href => "#"} Read More >
-                    %li
-                      .block-image
-                        .block-img-inner
-                          = image_tag('info-tick-mark.png', alt:'photo')
-                      .block-inner-content
-                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
-                        %a{:href => "#"} Learn More >
-                    %li
-                      .block-image
-                        .block-img-inner
-                          = image_tag('info-tick-mark.png', alt:'photo')                          
-                      .block-inner-content
-                        %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
-                        %a{:href => "#"} See All >
+          .content-outer
+            .content-left
+              %h3 About BeMyMBA
+              %p Like many MBA students, I was looking for ways to put my skills to use, gain experience and earn some extra cash in the process. I found a few freelance consulting options, but none were quite the right fit. I talked to colleagues and classmates and they all had a similar response. I told myself that there has to be a better way. Then it dawned on me – why not create it myself!
+              %p
+                = image_tag('interior-img.jpg', alt: 'img')
+                So, with the help of some really smart people, we launched BeMyMBA - an online marketplace where companies – big and small – post consulting and project work to be bid on by MBAs around the world. All at an economical cost. 
+
+              %p Our flexible framework provides secure virtual work platforms that are easy to use. Whether you're in Boston or Cape Town, we can quickly connect you to the help and opportunity you need. 
+
+              %p After a recent trip to South Africa our hearts had been changed and our model responded. A BRICS country that only gained their independence about 20 years ago, they are fiercely fighting to grow small business. BeMyMBA is fully committed to helping take ideas to inception and being a part of one of the most inspirational movements in the world of business. Through modern day technology and a little effort, we can help revolutionize an economy.
+
+              %p BeMyMBA is the next evolution of consulting – join us as we take business into the future and change the world.
+
+              

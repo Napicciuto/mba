@@ -36,35 +36,18 @@
         .form-group
           %label{:for => "contact_email"} Phone
           .input-group
-            %input#InputPhone.form-control{:name => "contacts[phone]", :placeholder => "Enter Phone", :required => "", :type => "phone"}
+            %input#InputPhone.form-control{:name => "contacts[phone]", :placeholder => "Enter Phone", :type => "phone"}
               %span.input-group-addon
-                %i.glyphicon.glyphicon-ok.form-control-feedback
-        .form-group
-          %label{:for => "contact_email"} City
-          .input-group
-            %input#InputCity.form-control{:name => "contacts[city]", :placeholder => "Enter City", :required => "", :type => "text"}
-              %span.input-group-addon
-                %i.glyphicon.glyphicon-ok.form-control-feedback
-        .form-group
-          %label{:for => "contact_email"} State
-          .input-group
-            %input#InputState.form-control{:name => "contacts[state]", :placeholder => "Enter State", :required => "", :type => "text"}
-              %span.input-group-addon
-                %i.glyphicon.glyphicon-ok.form-control-feedback
-        .form-group
-          %label{:for => "contact_email"} Zip
-          .input-group
-            %input#InputZip.form-control{:name => "contacts[zip]", :placeholder => "Enter Zip", :required => "", :type => "zip"}
-              %span.input-group-addon
-                %i.glyphicon.glyphicon-ok.form-control-feedback
         .form-group
           %label{:for => "contact_email"} Subject
           .input-group
             %select#InputEmail.form-control{:name => "contacts[subject]"}
+              %option
+                = preselected_option
+              %option General Inquiry
               %option Post a Project
               %option Technical Support
               %option MBA Applicant
-              %option General Inquiry
               %span.input-group-addon
                 %i.glyphicon.glyphicon-ok.form-control-feedback
         .form-group
