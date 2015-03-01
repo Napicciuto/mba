@@ -10,7 +10,7 @@
           .button-area
             = link_to 'Find a Project', project_link_path('worker'), class: :green_btn
             = link_to 'Post a Project', project_link_path('company'), class: :green_btn
-#how_it_works
+%a{ id: 'how_it_works'}
 %section.work-outer
   / how mba works starts here
   .wrapper
@@ -69,7 +69,7 @@
                 = image_tag('list-img2.png', alt:'image')
               %li
                 = image_tag('list-img3.png', alt:'image')
-#about_us
+%a{ id: 'about_us'}
 %section.news-outer
   / news and blog starts here
   .wrapper

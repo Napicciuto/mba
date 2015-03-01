@@ -17,7 +17,8 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $('a[href*=#]').click(function() {
+  $('body').delegate('a[href*=#]','click', function() {
+  	console.info('dd')
     var target = this.hash;
     var from_top = $(target).next().offset().top
     $('html, body').animate({
