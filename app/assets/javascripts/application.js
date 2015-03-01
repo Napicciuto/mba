@@ -18,7 +18,6 @@
 
 $(document).ready(function() {
   $('body').delegate('a[href*=#]','click', function() {
-  	console.info('dd')
     var target = this.hash;
     var from_top = $(target).next().offset().top
     $('html, body').animate({
