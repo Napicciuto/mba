@@ -1,91 +1,48 @@
-%section#interior-section{:role => "main"}
+%section
+  / hire with confidence starts here
   .wrapper
     .container
       .row
-        .col-sm-12
-          .content-outer
-            .content-left
-              %h3 Company Sign Up
-              %p
-                = link_to "MBA Sign Up", new_worker_registration_path 
-              %p Sign up with Email and Password
-              %p
-                = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-                  = devise_error_messages!
-                  .field
-                    = f.label :name
-                    = f.text_field :name, autofocus: true, placeholder: "Enter Name", class: 'form-control'
-                  %br/
-                  .field
-                    = f.label :phone
-                    = f.text_field :phone, placeholder: "Enter Phone", class: 'form-control'
-                  %br/
-                  .field
-                    = f.label :zip
-                    = f.text_field :zip, placeholder: "Enter Zip", class: 'form-control'
-                  %br/
-                  .field
-                    = f.label :company_name
-                    = f.text_field :company_name, placeholder: "Enter Company Name", class: 'form-control'
-                  %br/
-                  .field
-                    = f.label :email
-                    = f.email_field :email, placeholder: "Enter email", class: 'form-control'
-                  - if devise_mapping.confirmable? && resource.pending_reconfirmation? 
-                    %div
-                      Currently waiting confirmation for: 
-                      = resource.unconfirmed_email
-                  %br/
-                  .field
-                    = f.label :password
-                    = f.password_field :password, autocomplete: "off", placeholder: "Enter Password", class: 'form-control'
-                  %br/
-                  .field
-                    = f.label :password_confirmation
-                    = f.password_field :password_confirmation, autocomplete: "off", placeholder: "Enter Password Confirmation", class: 'form-control'
-                  %br/
-                  .actions
-                    = f.submit "Update", class: "btn btn-default"
-             
-            .content-right
-              .gain
-                %a.green_btn{:href => "#"} Gain New Customers
-              .find
-                %a.green_btn{:href => "#"} Find an MyMBA
-              %h4 Buzzworthy Blog
-              .block-content-outer
-                %ul
-                  %li
-                    .block-image
-                      .block-img-inner
-                        = image_tag('interior-professional.jpg', alt: 'photo')                      
-                    .block-inner-content
-                      %h6 Hire a Professional
-                      %span September 15, 2014
-                  %li
-                    .block-image
-                      .block-img-inner
-                        = image_tag('interior-story.jpg', alt: 'photo')                                               
-                    .block-inner-content
-                      %h6 Story Title
-                      %span September 15, 2014
-              %h4 Latest News
-              .block-content-outer.News
-                %ul
-                  %li
-                    .block-image
-                      .block-img-inner.date-details
-                        Oct
-                        %span 23
-                    .block-inner-content
-                      %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit, sed do eiusmod tempor incididu.
-                      %a{:href => "#"} Read More >
-                  %li
-                    .block-image
-                      .block-img-inner.date-details
-                        Oct
-                        %span 23
-                    .block-inner-content
-                      %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
-                      %a{:href => "#"} Learn More >
-
+        .col-sm-10
+          .content-section
+            %h3 Company Sign Up
+            %p
+              = link_to "MBA Sign Up", new_worker_registration_path 
+            %p Sign up with Email and Password
+            %p
+              = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+                = devise_error_messages!
+                .field
+                  = f.label :name
+                  = f.text_field :name, autofocus: true, placeholder: "Enter Name", class: 'form-control'
+                %br/
+                .field
+                  = f.label :phone
+                  = f.text_field :phone, placeholder: "Enter Phone", class: 'form-control'
+                %br/
+                .field
+                  = f.label :zip
+                  = f.text_field :zip, placeholder: "Enter Zip", class: 'form-control'
+                %br/
+                .field
+                  = f.label :company_name
+                  = f.text_field :company_name, placeholder: "Enter Company Name", class: 'form-control'
+                %br/
+                .field
+                  = f.label :email
+                  = f.email_field :email, placeholder: "Enter email", class: 'form-control'
+                - if devise_mapping.confirmable? && resource.pending_reconfirmation? 
+                  %div
+                    Currently waiting confirmation for: 
+                    = resource.unconfirmed_email
+                %br/
+                .field
+                  = f.label :password
+                  = f.password_field :password, autocomplete: "off", placeholder: "Enter Password", class: 'form-control'
+                %br/
+                .field
+                  = f.label :password_confirmation
+                  = f.password_field :password_confirmation, autocomplete: "off", placeholder: "Enter Password Confirmation", class: 'form-control'
+                %br/
+                .actions
+                  = f.submit "Update", class: "btn btn-default"

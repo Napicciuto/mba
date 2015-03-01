@@ -1,71 +1,31 @@
-%section#interior-section{:role => "main"}
+%section
+  / hire with confidence starts here
   .wrapper
     .container
       .row
-        .col-sm-12
-          .content-outer
-            .content-left
-              %h2 Log in
-              %h4 Sign in with Email and Password
-              %p
-                = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
-                  = devise_error_messages!
-                  .form-group
-                    .field
-                      = f.label :email
-                      = f.text_field :email, autofocus: true, placeholder: "Enter Email", class: 'form-control'
-                    %br/
-                    .field
-                      = f.label :password
-                      = f.password_field :password, placeholder: "Enter Password", class: 'form-control'
-                    %br/
-                    .actions
-                      = f.submit "Log in", class: "btn btn-default"
-                    %br/
-                    - if devise_mapping.rememberable?
-                      = f.check_box :remember_me
-                      = f.label :remember_me
-                      %br
-                      = link_to "Forgot your password?", new_password_path(resource_name)
-
-            .content-right
-              .gain
-                %a.green_btn{:href => "#"} Gain New Customers
-              .find
-                %a.green_btn{:href => "#"} Find an MyMBA
-              %h4 Buzzworthy Blog
-              .block-content-outer
-                %ul
-                  %li
-                    .block-image
-                      .block-img-inner
-                        = image_tag('interior-professional.jpg', alt: 'photo')                      
-                    .block-inner-content
-                      %h6 Hire a Professional
-                      %span September 15, 2014
-                  %li
-                    .block-image
-                      .block-img-inner
-                        = image_tag('interior-story.jpg', alt: 'photo')                                               
-                    .block-inner-content
-                      %h6 Story Title
-                      %span September 15, 2014
-              %h4 Latest News
-              .block-content-outer.News
-                %ul
-                  %li
-                    .block-image
-                      .block-img-inner.date-details
-                        Oct
-                        %span 23
-                    .block-inner-content
-                      %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit, sed do eiusmod tempor incididu.
-                      %a{:href => "#"} Read More >
-                  %li
-                    .block-image
-                      .block-img-inner.date-details
-                        Oct
-                        %span 23
-                    .block-inner-content
-                      %p Lorem ipsum dolor sit amet, con seth sectetur adip iscing elit.
-                      %a{:href => "#"} Learn More >
+        .col-sm-10
+          .content-section
+            %br/
+            %br/
+            %h2 Log in
+            %h4 Sign in with Email and Password
+            %p
+              = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| 
+                = devise_error_messages!
+                .form-group
+                  .field
+                    = f.label :email
+                    = f.text_field :email, autofocus: true, placeholder: "Enter Email", class: 'form-control'
+                  %br/
+                  .field
+                    = f.label :password
+                    = f.password_field :password, placeholder: "Enter Password", class: 'form-control'
+                  %br/
+                  .actions
+                    = f.submit "Log in", class: "btn btn-default"
+                  %br/
+                  - if devise_mapping.rememberable?
+                    = f.check_box :remember_me
+                    = f.label :remember_me
+                    %br
+                    = link_to "Forgot your password?", new_password_path(resource_name)
