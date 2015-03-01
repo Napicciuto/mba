@@ -23,7 +23,7 @@ module ApplicationHelper
     if either_user_signed_in?
       which_user == 'worker' ? 'MBA Applicant' : 'Post a project'
     else
-      'please select a subject...'
+      'Please select a subject...'
     end
   end
 end
