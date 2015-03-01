@@ -18,3 +18,8 @@
 .right { float: right; }
 .left { float: left; }
 .clear { clear: both; }
+.disclaimer {
+  margin-bottom: 10px; 
+  font-size: 10pt;
+  color: gray;
+}
