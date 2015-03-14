@@ -12,13 +12,16 @@
                 .right-top
                   .log-in
                     %ul
-                      %li
-                        - if either_user_signed_in?
+                      - if either_user_signed_in?
+                        %li
                           = link_to 'Log Out', worker_signed_in? ? destroy_worker_session_path : destroy_company_session_path
-                        - else
-                          = link_to 'Log In', worker_signed_in? ? new_worker_session_path : new_company_session_path
-                      %li
-                        = link_to 'Register', new_worker_registration_path
+                        %li
+                          = link_to 'Dashboard', welcome_path
+                      - else
+                        %li
+                          = link_to 'Log In', new_worker_session_path
+                        %li
+                          = link_to 'Register', new_worker_registration_path                        
                   %p
                     Have questions?
                     %a{:href => "+1 (567) 455.1098"}

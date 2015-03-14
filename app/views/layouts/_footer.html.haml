@@ -6,11 +6,14 @@
           .footer-inner
             %a{:href => "/"}
               = image_tag 'footer-logo.png', alt: 'logo'
-              - if either_user_signed_in?
-                = link_to 'Log Out', worker_signed_in? ? destroy_worker_session_path : destroy_company_session_path
-              - else
-                = link_to 'Log In', worker_signed_in? ? new_worker_session_path : new_company_session_path
-            = link_to 'Register', new_worker_registration_path
+            - if either_user_signed_in?
+              = link_to 'Log Out', worker_signed_in? ? destroy_worker_session_path : destroy_company_session_path
+              = link_to 'Dashboard', welcome_path
+            - else
+              = link_to 'Log In', new_worker_session_path
+              = link_to 'Register', new_worker_registration_path
+
+
           .footer-inner
             %h5 Quick Links
             %ul
@@ -33,11 +36,11 @@
             %h5 Stay Connected
             %ul
               %li.fb
-                %a{:href => "https://www.facebook.com/bemymba"} Like us on Facebook
+                = link_to 'Like us on Facebook', 'https://www.facebook.com/bemymba', target: '_blank'
               %li.tweet
-                %a{:href => "https://twitter.com/BeMyMBA"} Follow us on Twitter
+                = link_to 'Follow us on Twitter', 'https://twitter.com/BeMyMBA', target: '_blank'
               %li.info
-                %a{:href => "https://www.linkedin.com/company/be-my-mba"} LinkedIn
+                = link_to 'LinkedIn', 'https://www.linkedin.com/company/be-my-mba', target: '_blank'
           .footer-inner
             %h5 Terms of Us
             %ul

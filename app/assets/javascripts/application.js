@@ -15,13 +15,3 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function() {
-  $('body').delegate('a[href*=#]','click', function() {
-    var target = this.hash;
-    var from_top = $(target).next().offset().top
-    $('html, body').animate({
-      scrollTop: from_top
-    }, 1000);
-  });
-});

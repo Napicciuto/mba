@@ -29,7 +29,7 @@
 	.connect-with-customers {padding: 35px 0 43px;}
 	.section-left {width: 73%;}
 	.section-right {  width: 27%;}
-	.section-top h3,.content-section h3  {font-size: 27px;line-height: 28px;}
+	.section-top h3,.content-section h3  {color:#212323; font-size: 27px;line-height: 28px;}
 	.section-right .green_btn {font-size: 18px;font-size: 18px;background-position:right 25px center; padding: 15px 41px;}
 	.image-block ul li .tick-mark {max-width:100%;margin: -7px 0 0;}
 	.bx-wrapper .bx-next {right: -46px !important;}

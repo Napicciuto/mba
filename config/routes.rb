@@ -12,9 +12,8 @@ Rails.application.routes.draw do
   #root 'welcome#index'
 
   root 'pages#home'
-  get 'how_it_works', to: 'pages#how_it_works', as: :how_it_works
-  get 'about_us', to: 'pages#about_us', as: :about_us
   get 'news', to: 'pages#news', as: :news 
+  get 'welcome', to: 'pages#welcome', as: :welcome 
   get 'policy/:policy_type', to: 'pages#policy', as: :policy
 
   resources :contacts, only: [:index, :create]
