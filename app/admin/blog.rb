@@ -1,6 +1,8 @@
 ActiveAdmin.register Blog do
   permit_params :title, :body, :file, :created_at, :updated_at
 
+  menu false
+
   index do
     selectable_column
     id_column

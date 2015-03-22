@@ -13,8 +13,11 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'news', to: 'pages#news', as: :news 
-  get 'welcome', to: 'pages#welcome', as: :welcome 
+  get 'dashboard', to: 'dashboard#index', as: :dashboard 
   get 'policy/:policy_type', to: 'pages#policy', as: :policy
 
   resources :contacts, only: [:index, :create]
+  resources :projects do
+    resources :timesheets
+  end
 end

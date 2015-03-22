@@ -1,6 +1,8 @@
 ActiveAdmin.register Degree do
   permit_params :degree, :active
 
+  menu parent: 'Criteria'
+
   filter :degree
   filter :active
   filter :created_at

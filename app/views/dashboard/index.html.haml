@@ -1,0 +1,24 @@
+%section#interior-section{:role => "main"}
+  .wrapper
+    .container
+      .row
+        .col-sm-12
+          .content-outer
+            %h3
+              = worker_signed_in? ? 'MBA' : 'Company'
+              Dashboard
+            %br
+            - if worker_signed_in?
+              %h4 Current Projects
+              %p
+                - if @projects.blank?
+                  No projects assigned at this time.
+                - else
+                  %ul
+                    - @projects.each do |project|
+                      %li
+                        = link_to project.name, project_timesheets_path(project.id)
+            - else
+              %p
+                Coming Soon
+

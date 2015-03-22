@@ -1,6 +1,8 @@
 ActiveAdmin.register Company do
   permit_params :email, :password, :password_confirmation, :name, :title, :phone, :address, :city, :state, :zip, :company_name, :company_industry, :company_description, :years_in_business
 
+  menu parent: 'Customers'
+
   filter :name
   filter :company_name
   filter :company_industry

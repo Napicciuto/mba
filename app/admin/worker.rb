@@ -1,6 +1,8 @@
 ActiveAdmin.register Worker do
   permit_params :email, :password, :password_confirmation, :name, :phone, :address, :city, :state, :zip, :school, :degree, :major, :industry, :experience, :experience_year, :skills
 
+  menu parent: 'Customers'
+
   filter :name
   filter :email
   filter :school

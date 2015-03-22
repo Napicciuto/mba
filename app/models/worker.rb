@@ -6,4 +6,5 @@ class Worker < ActiveRecord::Base
 
   belongs_to :degree
   has_and_belongs_to_many :industries
+  has_many :assignments
 end

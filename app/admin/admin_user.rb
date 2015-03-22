@@ -1,5 +1,5 @@
 ActiveAdmin.register AdminUser do
-  menu :parent => "Administration"
+  menu parent: "Administration"
 
   permit_params :email, :password, :password_confirmation
 

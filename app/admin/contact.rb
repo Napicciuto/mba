@@ -1,5 +1,7 @@
 ActiveAdmin.register Contact do
   permit_params :name, :email, :phone, :city, :state, :zip, :subject, :body
+  
+  menu parent: 'Email'
 
   index do
     selectable_column

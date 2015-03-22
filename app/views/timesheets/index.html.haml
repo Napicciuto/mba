@@ -1,0 +1,60 @@
+%section#interior-section{:role => "main"}
+  .wrapper
+    .container
+      .row
+        .col-sm-12
+          .content-outer
+            %h3 Timesheet
+            %br
+            %h5
+              = "Project name: #{@project.name}"
+            %p
+              = "Project description: #{@project.description}"
+            %hr
+
+            %p
+              %table.table.table-striped
+                %thead
+                  %tr
+                    %th
+                      Description
+                    %th
+                      Date
+                    %th
+                      Time By Hour(s)
+                %tbody
+                  - total_time = 0
+                  - @project.timesheets.each do |timesheet|
+                    - total_time += timesheet.time
+                    %tr
+                      %td
+                        = timesheet.description                 
+                      %td
+                        = timesheet.created_at.strftime("%m/%d/%Y")            
+                      %td
+                        = timesheet.time
+                  %tr
+                    %td{colspan: 2 }
+                      Total hour(s)
+                    %td
+                      = total_time
+            
+            .container
+              .row
+                .col-sm-8
+                  .content-section
+                    = form_tag project_timesheets_path do 
+                      .field
+                        = label_tag :description
+                        = text_field_tag 'timesheets[description]', nil, placeholder: 'Add short description', class: 'form-control'
+                      %br/
+                      .field
+                        = label_tag :time, "Time by hour(s)"
+                        %br/
+                        = number_field_tag 'timesheets[time]', placeholder: 'Example: 8, 5.5, etc... ', class: 'form-control'
+                      %br/
+                      .actions
+                        = submit_tag "Add Time", class: "btn btn-default"
+
+
+

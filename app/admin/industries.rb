@@ -1,6 +1,8 @@
 ActiveAdmin.register Industry do
   permit_params :industry, :active
 
+  menu parent: 'Criteria'
+
   filter :industry
   filter :active
   filter :created_at
