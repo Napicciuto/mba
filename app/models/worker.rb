@@ -7,4 +7,6 @@ class Worker < ActiveRecord::Base
   belongs_to :degree
   has_and_belongs_to_many :industries
   has_many :assignments
+
+  accepts_nested_attributes_for :industries, allow_destroy: true
 end

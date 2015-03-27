@@ -27,7 +27,7 @@
                   %br/
                   .field
                     = f.label :degree
-                    = f.collection_select :degree, Degree.active, :id, :degree
+                    = f.collection_select :degree_id, Degree.active, :id, :degree
                   %br/
                   .field.select_industries
                     = f.label :industries
